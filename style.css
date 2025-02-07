@@ -1,0 +1,128 @@
+*, *::before
+,*::after {
+    box-sizing: border-box;
+}
+
+/* Weights: 200, 400, 600 */
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --font-f: "Poppins", serif;
+    --font-w-200: 200;
+    --font-w-400: 400;
+    --font-w-600: 600;
+}
+
+body {
+    margin: 0%;
+    font-family: var(--font-f);
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+    font-weight: var(--font-w-600);
+    color: var(--Very-Dark-Blue);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container {
+    margin-inline: auto;
+    max-width: 550px;
+    padding-inline: 2rem;
+}
+.container-cards {
+    max-width: 1200px;
+}
+
+header {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.container-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-w-200);
+}
+
+span {
+    font-weight: var(--font-w-600);
+}
+
+.container-text {
+    font-weight: var(--font-w-400);
+    color: var(--Grayish-Blue);
+    margin-bottom: 70px;
+}
+
+.green { grid-area: area1;}
+.red { grid-area: area2;}
+.yellow { grid-area: area3;}
+.blue { grid-area: area4;}
+
+.grid-cards {
+    display: grid;
+    grid-template-areas:
+    '.  area2 .'
+    'area1 area2 area4'
+    'area1 area3 area4' 
+    '.  area3 .';
+    gap: 25px;
+}
+
+.card {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.5rem 1.5rem -0.5rem var(--Grayish-Blue);
+}
+
+.img-cards {
+    display: block;
+    margin-block: 2rem;
+    margin-left: auto;
+}
+
+.red {
+    border-top: 4px solid var(--Red);
+}
+.yellow {
+    border-top: 4px solid var(--Orange);
+}
+.blue {
+    border-top: 4px solid var(--Blue);
+}
+.green {
+    border-top: 4px solid var(--Cyan);
+}
+
+.card-text > h3 {
+    font-weight: var(--font-w-600);
+}
+
+.card-text > p {
+    font-weight: var(--font-w-400);
+    color: var(--Grayish-Blue);
+    font-size: 0.8rem;
+    line-height: 1.65rem;
+}
+
+@media (max-width: 800px) {
+    .grid-cards {
+        display: grid;
+        grid-template-areas: 
+        'area1'
+        'area2'
+        'area3' 
+        'area4';
+    }
+
+    .container-title {
+        font-size: 2rem;
+    }
+}
