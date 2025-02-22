@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL here](https://github.com/Magardon55/four-card-feature-section-master)
-- Live Site URL: [Add live site URL here](https://magardon55.github.io/four-card-feature-section-master/)
+- Live Site URL: [live site URL here](https://magardon55.github.io/four-card-feature-section-master/)
 
 ## My process
 
